@@ -28,7 +28,7 @@
             "id": "cloud-core",
             "target": "jdpedrie/google-cloud-php-core.git",
             "path": "Core",
-            "entry": "ServiceBuilder.php"
+            "entry": "src/ServiceBuilder.php"
         }
     },
     "bin": [

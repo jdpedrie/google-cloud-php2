@@ -24,7 +24,7 @@
             "id": "cloud-bigquery",
             "target": "jdpedrie/google-cloud-php-bigquery.git",
             "path": "BigQuery",
-            "entry": "BigQueryClient.php"
+            "entry": "src/BigQueryClient.php"
         }
     },
     "autoload": {

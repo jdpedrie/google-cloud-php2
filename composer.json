@@ -65,10 +65,10 @@
         "opis/closure": "^3.0"
     },
     "replace": {
-        "google/cloud-bigquery": "1.0.3",
+        "google/cloud-bigquery": "1.2.0",
         "google/cloud-bigtable": "0.2.1",
         "google/cloud-container": "0.2.1",
-        "google/cloud-core": "1.17.0",
+        "google/cloud-core": "1.19.0",
         "google/cloud-dataproc": "0.2.1",
         "google/cloud-datastore": "1.3.0",
         "google/cloud-dlp": "0.5.2",
