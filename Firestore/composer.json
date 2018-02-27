@@ -23,7 +23,7 @@
     "extra": {
         "component": {
             "id": "cloud-firestore",
-            "target": "GoogleCloudPlatform/google-cloud-php-firestore.git",
+            "target": "jdpedrie/google-cloud-php-firestore.git",
             "path": "Firestore",
             "entry": "src/FirestoreClient.php"
         }

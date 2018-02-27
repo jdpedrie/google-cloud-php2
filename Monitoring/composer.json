@@ -13,7 +13,7 @@
     "extra": {
         "component": {
             "id": "cloud-monitoring",
-            "target": "GoogleCloudPlatform/google-cloud-php-monitoring.git",
+            "target": "jdpedrie/google-cloud-php-monitoring.git",
             "path": "Monitoring",
             "entry": null
         }

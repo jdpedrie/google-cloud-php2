@@ -11,6 +11,8 @@
             "name": "google/cloud",
             "defaultService": "readme",
             "versions": [
+                "v0.57.0",
+                "v0.55.0",
                 "v0.54.0",
                 "v0.53.0",
                 "v0.52.1",
@@ -89,6 +91,7 @@
             "name": "google/cloud-bigquery",
             "defaultService": "bigquery/bigqueryclient",
             "versions": [
+                "v1.1.0",
                 "v1.0.3",
                 "v1.0.2",
                 "v1.0.1",
@@ -136,6 +139,7 @@
             "name": "google/cloud-core",
             "defaultService": "core/servicebuilder",
             "versions": [
+                "v1.18.0",
                 "v1.17.0",
                 "v1.16.0",
                 "v1.15.3",
