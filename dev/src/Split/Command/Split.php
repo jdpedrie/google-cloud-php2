@@ -33,7 +33,7 @@ class Split extends Command
     const TAG_ENV = 'TRAVIS_TAG';
     const TARGET_REGEX = '/([a-zA-Z0-9-_]{1,})\/([a-zA-Z0-9-_]{1,})\.git/';
 
-    const COMPONENT_BASE = '%s/../src';
+    const COMPONENT_BASE = '%s/../';
     const SPLIT_SHELL = '%s/sh/split';
     const PATH_MANIFEST = '%s/../docs/manifest.json';
     const PARENT_TAG_NAME = 'https://github.com/jdpedrie/google-cloud-php2/releases/tag/%s';
