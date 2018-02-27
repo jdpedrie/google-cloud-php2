@@ -68,7 +68,7 @@ class Release extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $componentInput = $input->getArgument('component') ?: self::DEFAULT_COMPONENT;
-        $component = $this->getComponentComposer($componentInput);
+        $component = $this->getComponentComposer(dirname($this->cliBasePath), $componentInput);
 
         $version = $input->getArgument('version');
 

@@ -55,7 +55,7 @@ class Split extends Command
 
     public function __construct($cliBasePath)
     {
-        $this->cliBasePath = $cliBasePath;
+        $this->cliBasePath = realpath($cliBasePath);
         $this->splitShell = sprintf(self::SPLIT_SHELL, $cliBasePath);
         $this->components = sprintf(self::COMPONENT_BASE, $cliBasePath);
         $this->manifest = sprintf(self::PATH_MANIFEST, $cliBasePath);
@@ -79,7 +79,7 @@ class Split extends Command
             return;
         }
 
-        $components = $this->getComponents($this->components);
+        $components = $this->getComponents(dirname($this->cliBasePath), $this->components);
 
         $tag = getenv(self::TAG_ENV);
 

@@ -55,7 +55,7 @@ class Docs extends Command
 
     public function __construct($cliBasePath)
     {
-        $this->cliBasePath = $cliBasePath;
+        $this->cliBasePath = realpath($cliBasePath);
 
         parent::__construct();
     }
@@ -85,7 +85,7 @@ class Docs extends Command
             'overview' => $this->cliBasePath .'/../'. self::OVERVIEW_FILE
         ];
 
-        $components = $this->getComponents($paths['source']);
+        $components = $this->getComponents(dirname($this->cliBasePath), $paths['source']);
         $tocTemplate = json_decode(file_get_contents($paths['tocTemplate']), true);
 
         foreach ($components as $component) {

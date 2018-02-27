@@ -25,11 +25,12 @@ trait GetComponentsTrait
      * If $defaultComposerPath is set, it will parse that path as a composer
      * file and add it to the components.
      *
+     * @param string $libraryRootPath The root path of the library.
      * @param string $componentsPath The base path, under which composer.json files will be discovered.
      * @param string|null $defaultComposerPath If set, this path will be included as a component.
      * @return array Component data.
      */
-    private function getComponents($componentsPath, $defaultComposerPath = null)
+    private function getComponents($libraryRootPath, $componentsPath, $defaultComposerPath = null)
     {
         $files = glob($componentsPath .'/*/composer.json');
 
@@ -39,20 +40,18 @@ trait GetComponentsTrait
 
         $components = [];
         foreach ($files as $file) {
+            $file = realpath($file);
             $json = json_decode(file_get_contents($file), true);
 
-            $path = explode('src', $file);
+            $path = trim(str_replace($libraryRootPath, '', $file), '/');
+
             $component = $json['extra']['component'];
             $component['name'] = $json['name'];
             if (!isset($component['displayName'])) {
                 $component['displayName'] = $json['name'];
             }
 
-            if (count($path) > 1) {
-                $component['prefix'] = dirname('src' . $path[1]);
-            } else {
-                $component['prefix'] = '';
-            }
+            $component['prefix'] = dirname($path);
 
             $components[] = $component;
         }
@@ -138,9 +137,9 @@ trait GetComponentsTrait
      * @param string $componentId
      * @return array
      */
-    private function getComponentComposer($componentId)
+    private function getComponentComposer($libraryRootPath, $componentId)
     {
-        $components = $this->getComponents($this->components, $this->defaultComponentComposer);
+        $components = $this->getComponents($libraryRootPath, $this->components, $this->defaultComponentComposer);
 
         $components = array_values(array_filter($components, function ($component) use ($componentId) {
             return ($component['id'] === $componentId);
