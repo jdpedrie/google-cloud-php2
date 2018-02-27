@@ -160,7 +160,7 @@
     "extra": {
         "component": {
             "id": "google-cloud",
-            "target": "git@github.com:GoogleCloudPlatform/google-cloud-php.git",
+            "target": "git@github.com:jdpedrie/google-cloud-php2.git",
             "path": "src",
             "entry": [
                 "Version.php",

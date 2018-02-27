@@ -36,7 +36,7 @@ class Split extends Command
     const COMPONENT_BASE = '%s/../src';
     const SPLIT_SHELL = '%s/sh/split';
     const PATH_MANIFEST = '%s/../docs/manifest.json';
-    const PARENT_TAG_NAME = 'https://github.com/GoogleCloudPlatform/google-cloud-php/releases/tag/%s';
+    const PARENT_TAG_NAME = 'https://github.com/jdpedrie/google-cloud-php2/releases/tag/%s';
 
     const GITHUB_RELEASES_ENDPOINT = 'https://api.github.com/repos/%s/%s/releases/tags/%s';
     const GITHUB_RELEASE_CREATE_ENDPOINT = 'https://api.github.com/repos/%s/%s/releases';
