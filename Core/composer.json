@@ -27,7 +27,7 @@
         "component": {
             "id": "cloud-core",
             "target": "GoogleCloudPlatform/google-cloud-php-core.git",
-            "path": "Core/src",
+            "path": "Core",
             "entry": "ServiceBuilder.php"
         }
     },

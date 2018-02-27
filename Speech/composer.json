@@ -24,7 +24,7 @@
         "component": {
             "id": "cloud-speech",
             "target": "GoogleCloudPlatform/google-cloud-php-speech.git",
-            "path": "Speech/src",
+            "path": "Speech",
             "entry": "SpeechClient.php"
         }
     },

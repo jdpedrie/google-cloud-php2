@@ -23,7 +23,7 @@
         "component": {
             "id": "cloud-pubsub",
             "target": "GoogleCloudPlatform/google-cloud-php-pubsub.git",
-            "path": "PubSub/src",
+            "path": "PubSub",
             "entry": "PubSubClient.php"
         }
     },

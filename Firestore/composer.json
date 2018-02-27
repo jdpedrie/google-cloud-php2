@@ -24,7 +24,7 @@
         "component": {
             "id": "cloud-firestore",
             "target": "GoogleCloudPlatform/google-cloud-php-firestore.git",
-            "path": "Firestore/src",
+            "path": "Firestore",
             "entry": "FirestoreClient.php"
         }
     },

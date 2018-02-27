@@ -25,7 +25,7 @@
         "component": {
             "id": "cloud-language",
             "target": "GoogleCloudPlatform/google-cloud-php-language.git",
-            "path": "Language/src",
+            "path": "Language",
             "entry": "LanguageClient.php"
         }
     },
